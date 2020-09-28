@@ -82,7 +82,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm , xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_space     ), spawn "dmenu_run")
+    , ((modm,               xK_space     ), spawn "dmenu_run -i -fn 'Ubuntu' -l 5 -nb '#282a36' -nf '#f8f8f2' -sb '#e1acff' -sf '#f8f8f2'")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
