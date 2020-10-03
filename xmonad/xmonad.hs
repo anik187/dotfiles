@@ -35,7 +35,7 @@ myClickJustFocuses = True
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 2
+myBorderWidth   = 3
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -197,7 +197,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ Tall nmaster delta ratio
+     tiled   = spacingRaw False (Border 8 0 8 0) True (Border 0 8 0 8) True $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
