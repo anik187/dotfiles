@@ -11,6 +11,7 @@ import XMonad
 import XMonad.Layout.Spacing
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.SpawnOnce
+import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run
 
@@ -43,7 +44,6 @@ myBorderWidth   = 3
 -- "windows key" is usually mod4Mask.
 --
 myModMask       = mod4Mask
-
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
 -- workspace name. The number of workspaces is determined by the length
@@ -77,12 +77,17 @@ mypp = xmobarPP {   ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Curre
 -- Key bindings. Add, modify or remove key bindings here.
 --
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
-
+    
+    -----------------------------------------------Application launching-------------------------------------------- 
+    
     -- launch a terminal
     [ ((modm , xK_Return), spawn $ XMonad.terminal conf)
-
+    
+    -- launch config files
+    , ((modm .|. controlMask,   xK_c ), spawn (myTerminal ++ "-e dmenu-edit-configs.sh"))
+ 
     -- launch dmenu
-    , ((modm,               xK_space     ), spawn "dmenu_run")
+    , ((modm,               xK_space ), spawn "dmenu_run")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -163,6 +168,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --    | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
     --    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
+-- extra_keys = [("M-M1-c", spawn "dmenu-edit-configs.sh")]
 
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
@@ -197,7 +203,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = spacingRaw False (Border 8 0 8 0) True (Border 0 8 0 8) True $ Tall nmaster delta ratio
+     tiled   = spacingRaw False (Border 5 0 5 0) True (Border 0 5 0 5) True $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -296,7 +302,7 @@ defaults = def {
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
-    }
+    } --  `additionalKeysP` extra_keys
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
