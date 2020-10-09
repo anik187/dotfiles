@@ -67,7 +67,7 @@ mypp = xmobarPP {   ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Curre
                   , ppVisible = xmobarColor "#c3e88d" ""                -- Visible but not current workspace
                   , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" ""   -- Hidden workspaces in xmobar
                   , ppHiddenNoWindows = xmobarColor "#c792ea" ""        -- Hidden workspaces (no windows) 
-		  , ppTitle = xmobarColor "#b3afc2" "" . shorten 60     -- Title of active window in xmobar
+        		  , ppTitle = xmobarColor "#b3afc2" "" . shorten 60     -- Title of active window in xmobar
                   , ppSep =  "<fc=#666666> | </fc>"                     -- Separators in xmobar
                   , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"  -- Urgent workspace
                 }
@@ -81,19 +81,19 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -----------------------------------------------Application launching-------------------------------------------- 
     
     -- launch a terminal
-    [ ((modm , xK_Return), spawn $ XMonad.terminal conf)
+    [ --((modm , xK_Return), spawn $ XMonad.terminal conf)
     
     -- launch config files
-    , ((modm .|. controlMask,   xK_c ), spawn (myTerminal ++ "-e dmenu-edit-configs.sh"))
+ --   , ((modm .|. controlMask,   xK_c ), spawn ("./.dmenu/dmenu-edit-configs.sh"))
  
     -- launch dmenu
-    , ((modm,               xK_space ), spawn "dmenu_run")
+    -- ((modm,               xK_space ), spawn "dmenu_run")
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    --  ((modm .|. shiftMask, xK_c     ), kill)
 
      -- Rotate through the available layout algorithms
-    , ((modm,               xK_Tab ), sendMessage NextLayout)
+     ((modm,               xK_Tab ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
@@ -141,10 +141,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
+   -- , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
-    , ((modm .|. shiftMask, xK_r     ), spawn "xmonad --recompile; xmonad --restart")
+   -- , ((modm .|. shiftMask, xK_r     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -168,7 +168,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --    | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
     --    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
--- extra_keys = [("M-M1-c", spawn "dmenu-edit-configs.sh")]
+extra_keys = [
+                ("M-M1-c",     spawn "./.dmenu/dmenu-edit-configs.sh"),
+                ("M-<Return>", spawn myTerminal),
+                ("M-<Space>",  spawn "dmenu_run"),
+                ("M-S-c",      kill),
+                ("M-S-q",      io (exitWith ExitSuccess)),
+                ("M-S-r",      spawn "xmonad --recompile; xmonad --restart")   
+             ]
 
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
@@ -302,7 +309,7 @@ defaults = def {
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
-    } --  `additionalKeysP` extra_keys
+    }   `additionalKeysP` extra_keys
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
