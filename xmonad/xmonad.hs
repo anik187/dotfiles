@@ -67,7 +67,7 @@ mypp = xmobarPP {   ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Curre
                   , ppVisible = xmobarColor "#c3e88d" ""                -- Visible but not current workspace
                   , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" ""   -- Hidden workspaces in xmobar
                   , ppHiddenNoWindows = xmobarColor "#c792ea" ""        -- Hidden workspaces (no windows) 
-        		  , ppTitle = xmobarColor "#b3afc2" "" . shorten 60     -- Title of active window in xmobar
+        		  , ppTitle = xmobarColor "#b3afc2" "" . shorten 40     -- Title of active window in xmobar
                   , ppSep =  "<fc=#666666> | </fc>"                     -- Separators in xmobar
                   , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"  -- Urgent workspace
                 }
@@ -92,47 +92,42 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- close focused window
     --  ((modm .|. shiftMask, xK_c     ), kill)
 
-     -- Rotate through the available layout algorithms
-     ((modm,               xK_Tab ), sendMessage NextLayout)
+    -- Rotate through the available layout algorithms
+    ((modm,               xK_Tab ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
-    , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+    -- , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
 
-    -- Resize viewed windows to the correct size
-    , ((modm,               xK_n     ), refresh)
+    -- -- Resize viewed windows to the correct size
+    -- , ((modm,               xK_n     ), refresh)
 
-    -- Move focus to the next window
-    , ((modm,               xK_h     ), windows W.focusDown)
+    -- -- Move focus to the next window
+    -- , ((modm,               xK_h     ), windows W.focusDown)
 
-    -- Move focus to the previous window
-    , ((modm,               xK_l     ), windows W.focusUp  )
+    -- -- Move focus to the previous window
+    -- , ((modm,               xK_l     ), windows W.focusUp  )
 
-    -- Move focus to the master window
-    , ((modm,               xK_m     ), windows W.focusMaster  )
+    -- -- Move focus to the master window
+    -- , ((modm,               xK_m     ), windows W.focusMaster  )
 
-    -- Swap the focused window and the master window
-    -- , ((modm,               xK_Return), windows W.swapMaster)
+    -- -- Swap the focused window and the master window
+    -- -- , ((modm,               xK_Return), windows W.swapMaster)
 
-    -- Swap the focused window with the next window
-    , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
+    -- -- Swap the focused window with the next window
+    -- , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
 
-    -- Swap the focused window with the previous window
-    , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
+    -- -- Swap the focused window with the previous window
+    -- , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
 
-    -- Shrink the master area
-    , ((modm .|. shiftMask, xK_h     ), sendMessage Shrink)
 
-    -- Expand the master area
-    , ((modm .|. shiftMask, xK_l     ), sendMessage Expand)
+    -- -- Push window back into tiling
+    -- , ((modm,               xK_t     ), withFocused $ windows . W.sink)
 
-    -- Push window back into tiling
-    , ((modm,               xK_t     ), withFocused $ windows . W.sink)
+    -- -- Increment the number of windows in the master area
+    -- , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
 
-    -- Increment the number of windows in the master area
-    , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
-
-    -- Deincrement the number of windows in the master area
-    , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
+    -- -- Deincrement the number of windows in the master area
+    -- , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
@@ -156,8 +151,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-[1..7], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_7]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+       | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_7]
+       , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     -- ++
 
     --
@@ -168,14 +163,52 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --    | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
     --    , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
-extra_keys = [
+extra_keys =[
                 ("M-M1-c",     spawn "./.dmenu/dmenu-edit-configs.sh"),
                 ("M-<Return>", spawn myTerminal),
                 ("M-<Space>",  spawn "dmenu_run"),
                 ("M-S-c",      kill),
                 ("M-S-q",      io (exitWith ExitSuccess)),
-                ("M-S-r",      spawn "xmonad --recompile; xmonad --restart")   
-             ]
+                ("M-S-r",      spawn "xmonad --recompile; xmonad --restart"),   
+    -- Shrink the master area
+                ("M-S-h",      sendMessage Shrink),
+
+    -- Expand the master area
+                ("M-S-l",      sendMessage Expand),
+    --  Reset the layouts on the current workspace to default
+                ("M-S-<Space>",setLayout $ XMonad.layoutHook conf),
+
+    -- Resize viewed windows to the correct size
+                ("M-n",        refresh),
+
+    -- Move focus to the next window
+                ("M-h",        windows W.focusDown),
+
+    -- Move focus to the previous window
+                ("M-l",        windows W.focusUp  ),
+
+    -- Move focus to the master window
+                ("M-m",        windows W.focusMaster ),
+
+    -- Swap the focused window and the master window
+    --            ((modm,               xK_Return), windows W.swapMaster),
+
+    -- Swap the focused window with the next window
+                ("M-S-j",      windows W.swapDown  ),
+
+    -- Swap the focused window with the previous window
+                ("M-S-k",      windows W.swapUp    ),
+
+
+    -- Push window back into tiling
+                ("M-t",        withFocused $ windows . W.sink)
+
+    -- Increment the number of windows in the master area
+    --            ((modm              , xK_comma ), sendMessage (IncMasterN 1)),
+
+    -- Deincrement the number of windows in the master area
+    --            ((modm              , xK_period), sendMessage (IncMasterN (-1)))
+            ]
 
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
