@@ -1,0 +1,33 @@
+2020/11/03-09:16:35.345 3c8 Reusing MANIFEST /home/anik/.config/chromium/Default/Session Storage/MANIFEST-000001
+2020/11/03-09:16:35.491 3c8 Recovering log #234
+2020/11/03-09:16:35.776 3c8 Reusing old log /home/anik/.config/chromium/Default/Session Storage/000234.log 
+2020/11/03-09:27:37.871 58d Level-0 table #239: started
+2020/11/03-09:27:37.908 58d Level-0 table #239: 11322 bytes OK
+2020/11/03-09:27:37.942 58d Delete type=0 #234
+2020/11/03-12:18:55.322 f8e Level-0 table #241: started
+2020/11/03-12:18:55.378 f8e Level-0 table #241: 25772 bytes OK
+2020/11/03-12:18:55.412 f8e Delete type=0 #238
+2020/11/03-12:24:53.076 fa6 Level-0 table #243: started
+2020/11/03-12:24:53.156 fa6 Level-0 table #243: 25315 bytes OK
+2020/11/03-12:24:53.186 fa6 Delete type=0 #240
+2020/11/03-12:33:16.908 103f Level-0 table #245: started
+2020/11/03-12:33:16.960 103f Level-0 table #245: 24971 bytes OK
+2020/11/03-12:33:17.024 103f Delete type=0 #242
+2020/11/03-12:33:17.024 103e Compacting 4@0 + 1@1 files
+2020/11/03-12:33:17.078 103e Generated table #246@0: 4406 keys, 100801 bytes
+2020/11/03-12:33:17.078 103e Compacted 4@0 + 1@1 files => 100801 bytes
+2020/11/03-12:33:17.115 103e compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/11/03-12:33:17.116 103e Delete type=2 #236
+2020/11/03-12:33:17.116 103e Delete type=2 #239
+2020/11/03-12:33:17.116 103e Delete type=2 #245
+2020/11/03-12:33:17.116 103e Delete type=2 #243
+2020/11/03-12:33:17.116 103e Delete type=2 #241
+2020/11/03-12:33:53.581 112d Level-0 table #248: started
+2020/11/03-12:33:53.655 112d Level-0 table #248: 21140 bytes OK
+2020/11/03-12:33:53.689 112d Delete type=0 #244
+2020/11/03-12:38:11.449 112d Level-0 table #250: started
+2020/11/03-12:38:11.497 112d Level-0 table #250: 24454 bytes OK
+2020/11/03-12:38:11.529 112d Delete type=0 #247
+2020/11/03-12:40:22.072 112d Level-0 table #252: started
+2020/11/03-12:40:22.169 112d Level-0 table #252: 21523 bytes OK
+2020/11/03-12:40:22.231 112d Delete type=0 #249

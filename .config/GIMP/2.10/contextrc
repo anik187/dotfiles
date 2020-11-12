@@ -1,0 +1,15 @@
+# GIMP user context
+
+(tool "gimp-bucket-fill-tool")
+(paint-info "gimp-paintbrush")
+(foreground (color-rgb 0.16078431372549021 0.17647058823529413 0.24313725490196078))
+(brush "2. Hardness 050")
+(dynamics "Dynamics Off")
+(mybrush "100% Opaque")
+(pattern "Slate")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(font "Sans-serif")
+(tool-preset "Core Pointer")
+
+# end of user context

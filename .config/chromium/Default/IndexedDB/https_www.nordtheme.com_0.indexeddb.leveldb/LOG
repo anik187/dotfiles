@@ -1,0 +1,5 @@
+2020/10/06-07:48:52.971 1982 Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_www.nordtheme.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/06-07:50:59.865 1043 Level-0 table #5: started
+2020/10/06-07:50:59.905 1043 Level-0 table #5: 5289 bytes OK
+2020/10/06-07:50:59.938 1043 Delete type=0 #3
+2020/10/06-07:50:59.939 1043 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

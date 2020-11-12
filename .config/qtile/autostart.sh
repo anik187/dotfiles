@@ -1,0 +1,1 @@
+/home/anik/dotfiles/.config/qtile/autostart.sh

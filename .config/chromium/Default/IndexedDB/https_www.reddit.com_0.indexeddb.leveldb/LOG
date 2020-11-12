@@ -1,0 +1,15 @@
+2020/09/10-10:55:50.996 e93 Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/10-10:55:50.996 e93 Recovering log #27
+2020/09/10-10:55:50.996 e93 Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000027.log 
+2020/09/10-10:59:41.432 8bf Level-0 table #32: started
+2020/09/10-10:59:41.474 8bf Level-0 table #32: 1442 bytes OK
+2020/09/10-10:59:41.512 8bf Delete type=0 #27
+2020/09/10-10:59:41.512 8bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/09/10-10:59:41.512 8bf Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x15\x00v\x002\x00_\x00e\x00v\x00e\x00n\x00t\x00_\x00b\x00o\x00i\x00l\x00e\x00r\x00_\x00p\x00l\x00a\x00t\x00e' @ 206 : 1
+2020/09/10-10:59:41.512 8bf Compacting 1@1 + 1@2 files
+2020/09/10-10:59:41.549 8bf Generated table #33@1: 20 keys, 1398 bytes
+2020/09/10-10:59:41.549 8bf Compacted 1@1 + 1@2 files => 1398 bytes
+2020/09/10-10:59:41.587 8bf compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/09/10-10:59:41.587 8bf Delete type=2 #32
+2020/09/10-10:59:41.587 8bf Delete type=2 #29
+2020/09/10-10:59:41.587 8bf Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x15\x00v\x002\x00_\x00e\x00v\x00e\x00n\x00t\x00_\x00b\x00o\x00i\x00l\x00e\x00r\x00_\x00p\x00l\x00a\x00t\x00e' @ 206 : 1 .. (end); will stop at (end)

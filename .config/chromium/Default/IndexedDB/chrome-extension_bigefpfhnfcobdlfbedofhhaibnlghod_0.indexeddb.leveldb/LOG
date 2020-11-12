@@ -1,0 +1,26 @@
+2020/10/11-09:11:03.882 6f9 Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/chrome-extension_bigefpfhnfcobdlfbedofhhaibnlghod_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/11-09:11:03.882 6f9 Recovering log #4
+2020/10/11-09:11:03.882 6f9 Reusing old log /home/anik/.config/chromium/Default/IndexedDB/chrome-extension_bigefpfhnfcobdlfbedofhhaibnlghod_0.indexeddb.leveldb/000004.log 
+2020/10/11-09:11:04.235 f8c Level-0 table #8: started
+2020/10/11-09:11:04.294 f8c Level-0 table #8: 7232 bytes OK
+2020/10/11-09:11:04.378 f8c Delete type=0 #4
+2020/10/11-09:11:04.378 f8c Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2020/10/11-09:12:17.413 f8c Level-0 table #10: started
+2020/10/11-09:12:17.495 f8c Level-0 table #10: 92555 bytes OK
+2020/10/11-09:12:17.583 f8c Delete type=0 #7
+2020/10/11-09:12:17.583 f8c Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x03\x01\x03\x01\x01\x00l' @ 3506 : 1
+2020/10/11-09:12:17.583 f8c Compacting 1@0 + 1@1 files
+2020/10/11-09:12:17.687 f8c Generated table #11@0: 829 keys, 58564 bytes
+2020/10/11-09:12:17.687 f8c Compacted 1@0 + 1@1 files => 58564 bytes
+2020/10/11-09:12:17.741 f8c compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/10/11-09:12:17.741 f8c Delete type=2 #10
+2020/10/11-09:12:17.741 f8c Delete type=2 #8
+2020/10/11-09:12:17.742 f8c Manual compaction at level-0 from '\x00\x03\x01\x03\x01\x01\x00l' @ 3506 : 1 .. (end); will stop at (end)
+2020/10/11-09:12:17.742 f8c Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x03\x01\x01\x00l' @ 3506 : 1
+2020/10/11-09:12:17.742 f8c Compacting 1@1 + 1@2 files
+2020/10/11-09:12:17.829 f8c Generated table #12@1: 832 keys, 58588 bytes
+2020/10/11-09:12:17.829 f8c Compacted 1@1 + 1@2 files => 58588 bytes
+2020/10/11-09:12:17.925 f8c compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/11-09:12:17.925 f8c Delete type=2 #11
+2020/10/11-09:12:17.925 f8c Delete type=2 #5
+2020/10/11-09:12:17.925 f8c Manual compaction at level-1 from '\x00\x03\x01\x03\x01\x01\x00l' @ 3506 : 1 .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2020/10/13-09:01:21.275 3e1f Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_zoom.us_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/13-09:01:21.275 3e1f Recovering log #13
+2020/10/13-09:01:21.282 3e1f Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_zoom.us_0.indexeddb.leveldb/000013.log 
+2020/10/13-09:43:20.235 8508 Level-0 table #18: started
+2020/10/13-09:43:20.277 8508 Level-0 table #18: 4200 bytes OK
+2020/10/13-09:43:20.313 8508 Delete type=0 #13
+2020/10/13-09:43:20.313 8508 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/13-09:43:20.313 8508 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x02\x03\x01\x09\x00v\x00i\x00d\x00e\x00o\x00s\x00i\x00m\x00d' @ 503 : 1
+2020/10/13-09:43:20.313 8508 Compacting 1@1 + 1@2 files
+2020/10/13-09:43:20.344 8508 Generated table #19@1: 52 keys, 1008 bytes
+2020/10/13-09:43:20.344 8508 Compacted 1@1 + 1@2 files => 1008 bytes
+2020/10/13-09:43:20.380 8508 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/13-09:43:20.380 8508 Delete type=2 #18
+2020/10/13-09:43:20.380 8508 Delete type=2 #15
+2020/10/13-09:43:20.380 8508 Manual compaction at level-1 from '\x00\x03\x02\x03\x01\x09\x00v\x00i\x00d\x00e\x00o\x00s\x00i\x00m\x00d' @ 503 : 1 .. (end); will stop at (end)

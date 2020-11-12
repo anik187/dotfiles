@@ -1,0 +1,42 @@
+2020/11/02-16:14:45.667 33a Reusing MANIFEST /home/anik/.config/chromium/Default/Sync Data/LevelDB/MANIFEST-000001
+2020/11/02-16:14:45.668 33a Recovering log #391
+2020/11/02-16:14:45.992 33a Reusing old log /home/anik/.config/chromium/Default/Sync Data/LevelDB/000391.log 
+2020/11/02-16:18:53.130 372 Level-0 table #395: started
+2020/11/02-16:18:53.198 372 Level-0 table #395: 94280 bytes OK
+2020/11/02-16:18:53.302 372 Delete type=0 #391
+2020/11/02-16:18:53.302 35e Compacting 4@0 + 1@1 files
+2020/11/02-16:18:53.370 35e Generated table #396@0: 232 keys, 25893 bytes
+2020/11/02-16:18:53.370 35e Compacted 4@0 + 1@1 files => 25893 bytes
+2020/11/02-16:18:53.405 35e compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/11/02-16:18:53.405 35e Delete type=2 #385
+2020/11/02-16:18:53.405 35e Delete type=2 #395
+2020/11/02-16:18:53.405 35e Delete type=2 #389
+2020/11/02-16:18:53.405 35e Delete type=2 #387
+2020/11/02-16:18:53.405 35e Delete type=2 #392
+2020/11/02-16:25:09.104 353 Level-0 table #398: started
+2020/11/02-16:25:09.150 353 Level-0 table #398: 85592 bytes OK
+2020/11/02-16:25:09.188 353 Delete type=0 #394
+2020/11/02-16:42:29.362 887 Level-0 table #400: started
+2020/11/02-16:42:29.478 887 Level-0 table #400: 90223 bytes OK
+2020/11/02-16:42:29.629 887 Delete type=0 #397
+2020/11/02-17:09:44.322 a3d Level-0 table #402: started
+2020/11/02-17:09:44.449 a3d Level-0 table #402: 93945 bytes OK
+2020/11/02-17:09:44.556 a3d Delete type=0 #399
+2020/11/02-17:37:06.211 c0b Level-0 table #404: started
+2020/11/02-17:37:06.312 c0b Level-0 table #404: 92564 bytes OK
+2020/11/02-17:37:06.456 c0b Delete type=0 #401
+2020/11/02-17:37:06.457 c1d Compacting 4@0 + 1@1 files
+2020/11/02-17:37:06.521 c1d Generated table #405@0: 232 keys, 27972 bytes
+2020/11/02-17:37:06.521 c1d Compacted 4@0 + 1@1 files => 27972 bytes
+2020/11/02-17:37:06.614 c1d compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/11/02-17:37:06.614 c1d Delete type=2 #396
+2020/11/02-17:37:06.615 c1d Delete type=2 #404
+2020/11/02-17:37:06.615 c1d Delete type=2 #400
+2020/11/02-17:37:06.615 c1d Delete type=2 #402
+2020/11/02-17:37:06.615 c1d Delete type=2 #398
+2020/11/02-18:10:14.712 d5d Level-0 table #407: started
+2020/11/02-18:10:14.861 d5d Level-0 table #407: 95010 bytes OK
+2020/11/02-18:10:14.945 d5d Delete type=0 #403
+2020/11/02-19:00:00.113 f74 Level-0 table #409: started
+2020/11/02-19:00:00.191 f74 Level-0 table #409: 96108 bytes OK
+2020/11/02-19:00:00.227 f74 Delete type=0 #406

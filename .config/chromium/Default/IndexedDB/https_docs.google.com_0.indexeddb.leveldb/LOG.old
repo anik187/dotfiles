@@ -1,0 +1,8 @@
+2020/10/27-11:34:59.790 26f Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/27-11:34:59.790 26f Recovering log #38
+2020/10/27-11:34:59.790 26f Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/000038.log 
+2020/10/27-12:12:37.731 7c3 Level-0 table #42: started
+2020/10/27-12:12:37.731 7c3 Level-0 table #42: 0 bytes OK
+2020/10/27-12:12:37.779 7c3 Delete type=0 #38
+2020/10/27-12:12:37.779 7c3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/27-12:12:37.779 7c3 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

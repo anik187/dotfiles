@@ -37,8 +37,14 @@ d/home/anik/Music
 	In the end - Linkin Park (with).mp3
 5
 d/home/anik
-	zathura
-13
+	wallpapers
+12
+d/home/anik/wallpapers
+	0018.jpg
+18
+d/home/anik
+	..
+0
 d
 
 # Right window history (oldest to newest):
@@ -48,6 +54,7 @@ D/home/anik
 D
 
 # Command line history (oldest to newest):
+:colorscheme
 :q
 
 # Search history (oldest to newest):

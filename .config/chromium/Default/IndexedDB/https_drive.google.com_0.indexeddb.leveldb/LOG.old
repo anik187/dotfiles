@@ -1,0 +1,15 @@
+2020/10/27-11:34:54.511 293 Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/27-11:34:54.512 293 Recovering log #54
+2020/10/27-11:34:54.512 293 Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000054.log 
+2020/10/27-12:12:37.779 7c3 Level-0 table #59: started
+2020/10/27-12:12:37.870 7c3 Level-0 table #59: 2164522 bytes OK
+2020/10/27-12:12:37.901 7c3 Delete type=0 #54
+2020/10/27-12:12:37.902 7c3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/27-12:12:37.902 7c3 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x03\x01'\x00a\x002\x00a\x00b\x00b\x001\x003\x004\x00a\x00a\x001\x007\x008\x00f\x00a\x003\x007\x006\x005\x00a\x005\x003\x009\x000\x00d\x00f\x003\x00c\x007\x001\x006\x00a\x00_\x003\x00_\x002\x00:\x000\x000' @ 21745 : 0
+2020/10/27-12:12:37.902 7c3 Compacting 1@1 + 1@2 files
+2020/10/27-12:12:37.937 7c3 Generated table #60@1: 72 keys, 58399 bytes
+2020/10/27-12:12:37.937 7c3 Compacted 1@1 + 1@2 files => 58399 bytes
+2020/10/27-12:12:37.975 7c3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/27-12:12:37.975 7c3 Delete type=2 #59
+2020/10/27-12:12:37.975 7c3 Delete type=2 #56
+2020/10/27-12:12:37.976 7c3 Manual compaction at level-1 from '\x00\x01\x03\x03\x01'\x00a\x002\x00a\x00b\x00b\x001\x003\x004\x00a\x00a\x001\x007\x008\x00f\x00a\x003\x007\x006\x005\x00a\x005\x003\x009\x000\x00d\x00f\x003\x00c\x007\x001\x006\x00a\x00_\x003\x00_\x002\x00:\x000\x000' @ 21745 : 0 .. (end); will stop at (end)

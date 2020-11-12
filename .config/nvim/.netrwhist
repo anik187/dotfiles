@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/anik/.doom.d'
+let g:netrw_dirhist_3='/home/anik'
+let g:netrw_dirhist_2='/home/anik/.config'
+let g:netrw_dirhist_1='/home/anik/.config/nvim'

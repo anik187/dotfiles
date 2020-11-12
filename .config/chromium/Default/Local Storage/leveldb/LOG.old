@@ -1,0 +1,20 @@
+2020/11/02-16:14:45.948 354 Reusing MANIFEST /home/anik/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2020/11/02-16:14:45.948 354 Recovering log #636
+2020/11/02-16:14:46.167 354 Reusing old log /home/anik/.config/chromium/Default/Local Storage/leveldb/000636.log 
+2020/11/02-16:27:23.934 372 Level-0 table #640: started
+2020/11/02-16:27:24.060 372 Level-0 table #640: 19736 bytes OK
+2020/11/02-16:27:24.160 372 Delete type=0 #636
+2020/11/02-16:27:24.161 353 Compacting 4@0 + 2@1 files
+2020/11/02-16:27:24.477 353 Generated table #641@0: 1858 keys, 2123399 bytes
+2020/11/02-16:27:24.536 353 Generated table #642@0: 288 keys, 136380 bytes
+2020/11/02-16:27:24.536 353 Compacted 4@0 + 2@1 files => 2259779 bytes
+2020/11/02-16:27:24.567 353 compacted to: files[ 0 2 1 0 0 0 0 ]
+2020/11/02-16:27:24.567 353 Delete type=2 #640
+2020/11/02-16:27:24.567 353 Delete type=2 #637
+2020/11/02-16:27:24.567 353 Delete type=2 #634
+2020/11/02-16:27:24.567 353 Delete type=2 #630
+2020/11/02-16:27:24.567 353 Delete type=2 #629
+2020/11/02-16:27:24.567 353 Delete type=2 #632
+2020/11/02-17:52:26.745 d04 Level-0 table #644: started
+2020/11/02-17:52:26.783 d04 Level-0 table #644: 12684 bytes OK
+2020/11/02-17:52:26.818 d04 Delete type=0 #639

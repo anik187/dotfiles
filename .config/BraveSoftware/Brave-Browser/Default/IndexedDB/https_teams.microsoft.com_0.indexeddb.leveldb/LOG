@@ -1,0 +1,15 @@
+2020/10/09-08:52:23.728 243b Reusing MANIFEST /home/anik/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/09-08:52:23.728 243b Recovering log #11
+2020/10/09-08:52:23.728 243b Reusing old log /home/anik/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000011.log 
+2020/10/09-09:00:30.483 2795 Level-0 table #16: started
+2020/10/09-09:00:30.527 2795 Level-0 table #16: 39561 bytes OK
+2020/10/09-09:00:30.563 2795 Delete type=0 #11
+2020/10/09-09:00:30.563 2795 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/09-09:00:30.563 2795 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x06\x02\x1f\x01\x10\x000\x000\x000\x001\x006\x000\x001\x004\x003\x000\x000\x000\x009\x004\x000\x009\x00\x01\x0c\x001\x003\x001\x009\x008\x004\x007\x008\x005\x003\x000\x008' @ 17290 : 1
+2020/10/09-09:00:30.563 2795 Compacting 1@1 + 1@2 files
+2020/10/09-09:00:30.627 2795 Generated table #17@1: 3924 keys, 622014 bytes
+2020/10/09-09:00:30.627 2795 Compacted 1@1 + 1@2 files => 622014 bytes
+2020/10/09-09:00:30.663 2795 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/09-09:00:30.663 2795 Delete type=2 #13
+2020/10/09-09:00:30.663 2795 Delete type=2 #16
+2020/10/09-09:00:30.664 2795 Manual compaction at level-1 from '\x00\x06\x02\x1f\x01\x10\x000\x000\x000\x001\x006\x000\x001\x004\x003\x000\x000\x000\x009\x004\x000\x009\x00\x01\x0c\x001\x003\x001\x009\x008\x004\x007\x008\x005\x003\x000\x008' @ 17290 : 1 .. (end); will stop at (end)

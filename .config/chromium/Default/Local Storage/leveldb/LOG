@@ -1,0 +1,43 @@
+2020/11/03-09:16:34.003 3c8 Reusing MANIFEST /home/anik/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2020/11/03-09:16:34.204 3c8 Recovering log #643
+2020/11/03-09:16:34.279 3c8 Level-0 table #646: started
+2020/11/03-09:16:34.461 3c8 Level-0 table #646: 13483 bytes OK
+2020/11/03-09:16:34.616 3c8 Delete type=0 #643
+2020/11/03-10:39:25.655 853 Level-0 table #649: started
+2020/11/03-10:39:25.712 853 Level-0 table #649: 12943 bytes OK
+2020/11/03-10:39:25.749 853 Delete type=0 #647
+2020/11/03-10:55:57.130 9c7 Level-0 table #651: started
+2020/11/03-10:55:57.189 9c7 Level-0 table #651: 263134 bytes OK
+2020/11/03-10:55:57.222 9c7 Delete type=0 #648
+2020/11/03-10:55:57.222 9c6 Compacting 4@0 + 2@1 files
+2020/11/03-10:55:57.356 9c6 Generated table #652@0: 2162 keys, 2071612 bytes
+2020/11/03-10:55:57.356 9c6 Compacted 4@0 + 2@1 files => 2071612 bytes
+2020/11/03-10:55:57.388 9c6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/11/03-10:55:57.388 9c6 Delete type=2 #642
+2020/11/03-10:55:57.388 9c6 Delete type=2 #651
+2020/11/03-10:55:57.388 9c6 Delete type=2 #641
+2020/11/03-10:55:57.388 9c6 Delete type=2 #646
+2020/11/03-10:55:57.388 9c6 Delete type=2 #644
+2020/11/03-10:55:57.388 9c6 Delete type=2 #649
+2020/11/03-11:19:46.062 ae6 Level-0 table #654: started
+2020/11/03-11:19:46.107 ae6 Level-0 table #654: 31674 bytes OK
+2020/11/03-11:19:46.139 ae6 Delete type=0 #650
+2020/11/03-11:20:44.661 b7c Level-0 table #656: started
+2020/11/03-11:20:44.711 b7c Level-0 table #656: 469597 bytes OK
+2020/11/03-11:20:44.745 b7c Delete type=0 #653
+2020/11/03-12:00:46.062 d40 Level-0 table #658: started
+2020/11/03-12:00:46.118 d40 Level-0 table #658: 44498 bytes OK
+2020/11/03-12:00:46.156 d40 Delete type=0 #655
+2020/11/03-12:07:44.465 d71 Level-0 table #660: started
+2020/11/03-12:07:44.516 d71 Level-0 table #660: 335175 bytes OK
+2020/11/03-12:07:44.574 d71 Delete type=0 #657
+2020/11/03-12:07:44.575 dcd Compacting 4@0 + 1@1 files
+2020/11/03-12:07:44.683 dcd Generated table #661@0: 2035 keys, 2116369 bytes
+2020/11/03-12:07:44.733 dcd Generated table #662@0: 132 keys, 78791 bytes
+2020/11/03-12:07:44.733 dcd Compacted 4@0 + 1@1 files => 2195160 bytes
+2020/11/03-12:07:44.766 dcd compacted to: files[ 0 2 1 0 0 0 0 ]
+2020/11/03-12:07:44.766 dcd Delete type=2 #654
+2020/11/03-12:07:44.766 dcd Delete type=2 #660
+2020/11/03-12:07:44.766 dcd Delete type=2 #656
+2020/11/03-12:07:44.766 dcd Delete type=2 #652
+2020/11/03-12:07:44.766 dcd Delete type=2 #658

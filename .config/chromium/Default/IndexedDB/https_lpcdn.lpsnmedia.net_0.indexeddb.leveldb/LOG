@@ -1,0 +1,5 @@
+2020/09/10-12:11:35.584 133c Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_lpcdn.lpsnmedia.net_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/10-12:12:51.748 8bf Level-0 table #5: started
+2020/09/10-12:12:51.782 8bf Level-0 table #5: 5111 bytes OK
+2020/09/10-12:12:51.814 8bf Delete type=0 #3
+2020/09/10-12:12:51.814 8bf Manual compaction at level-0 from (begin) .. (end); will stop at (end)

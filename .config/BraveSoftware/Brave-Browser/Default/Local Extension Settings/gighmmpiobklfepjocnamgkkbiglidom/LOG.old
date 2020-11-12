@@ -1,0 +1,16 @@
+2020/10/23-23:27:58.727 38ea Reusing MANIFEST /home/anik/.config/BraveSoftware/Brave-Browser/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/MANIFEST-000001
+2020/10/23-23:27:58.728 38ea Recovering log #155
+2020/10/23-23:28:00.796 38ea Level-0 table #158: started
+2020/10/23-23:28:01.337 38ea Level-0 table #158: 5671841 bytes OK
+2020/10/23-23:28:01.378 38ea Delete type=0 #155
+2020/10/23-23:28:01.380 3a00 Compacting 4@0 + 2@1 files
+2020/10/23-23:28:02.649 3a00 Generated table #160@0: 1 keys, 5671648 bytes
+2020/10/23-23:28:02.800 3a00 Generated table #161@0: 7 keys, 422 bytes
+2020/10/23-23:28:02.800 3a00 Compacted 4@0 + 2@1 files => 5672070 bytes
+2020/10/23-23:28:03.044 3a00 compacted to: files[ 0 2 1 0 0 0 0 ]
+2020/10/23-23:28:03.044 3a00 Delete type=2 #149
+2020/10/23-23:28:03.044 3a00 Delete type=2 #156
+2020/10/23-23:28:03.044 3a00 Delete type=2 #158
+2020/10/23-23:28:03.044 3a00 Delete type=2 #148
+2020/10/23-23:28:03.044 3a00 Delete type=2 #152
+2020/10/23-23:28:03.044 3a00 Delete type=2 #154

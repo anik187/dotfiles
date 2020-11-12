@@ -1,0 +1,17 @@
+2020/11/03-11:19:11.113 b7f Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/03-11:19:11.113 b7f Recovering log #143
+2020/11/03-11:19:11.113 b7f Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000143.log 
+2020/11/03-12:06:37.209 d71 Level-0 table #149: started
+2020/11/03-12:06:37.263 d71 Level-0 table #149: 415004 bytes OK
+2020/11/03-12:06:37.297 d71 Delete type=0 #143
+2020/11/03-12:06:37.297 d71 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/03-12:06:37.297 d71 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x08\x05\x02\x01*\x00l\x00i\x00s\x00t\x00v\x00i\x00e\x00w\x00d\x00a\x00t\x00a\x00p\x00r\x00e\x00f\x00e\x00t\x00c\x00h\x00-\x00-\x001\x004\x000\x008\x002\x002\x005\x002\x009\x008\x00-\x006\x008\x008\x002\x005\x001\x007\x000\x008' @ 201169 : 1
+2020/11/03-12:06:37.297 d71 Compacting 1@1 + 2@2 files
+2020/11/03-12:06:37.381 d71 Generated table #150@1: 7395 keys, 2163230 bytes
+2020/11/03-12:06:37.439 d71 Generated table #151@1: 4173 keys, 954160 bytes
+2020/11/03-12:06:37.439 d71 Compacted 1@1 + 2@2 files => 3117390 bytes
+2020/11/03-12:06:37.471 d71 compacted to: files[ 0 0 2 0 0 0 0 ]
+2020/11/03-12:06:37.472 d71 Delete type=2 #145
+2020/11/03-12:06:37.472 d71 Delete type=2 #146
+2020/11/03-12:06:37.472 d71 Delete type=2 #149
+2020/11/03-12:06:37.473 d71 Manual compaction at level-1 from '\x00\x08\x05\x02\x01*\x00l\x00i\x00s\x00t\x00v\x00i\x00e\x00w\x00d\x00a\x00t\x00a\x00p\x00r\x00e\x00f\x00e\x00t\x00c\x00h\x00-\x00-\x001\x004\x000\x008\x002\x002\x005\x002\x009\x008\x00-\x006\x008\x008\x002\x005\x001\x007\x000\x008' @ 201169 : 1 .. (end); will stop at (end)

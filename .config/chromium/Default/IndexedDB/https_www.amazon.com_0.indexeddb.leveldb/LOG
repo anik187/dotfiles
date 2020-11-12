@@ -1,0 +1,5 @@
+2020/10/28-13:44:24.701 49d1 Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_www.amazon.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/28-13:44:34.269 4a34 Level-0 table #5: started
+2020/10/28-13:44:34.327 4a34 Level-0 table #5: 1329 bytes OK
+2020/10/28-13:44:34.386 4a34 Delete type=0 #3
+2020/10/28-13:44:34.386 4a34 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
