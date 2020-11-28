@@ -1,7 +1,0 @@
-2020/10/13-20:16:04.523 5e2 Reusing MANIFEST /home/anik/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/13-20:16:04.523 5e2 Recovering log #3
-2020/10/13-20:16:04.556 5e2 Reusing old log /home/anik/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000003.log 
-2020/10/13-20:16:08.384 5e2 Level-0 table #5: started
-2020/10/13-20:16:08.469 5e2 Level-0 table #5: 981142 bytes OK
-2020/10/13-20:16:08.523 5e2 Delete type=0 #3
-2020/10/13-20:16:08.523 5e2 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

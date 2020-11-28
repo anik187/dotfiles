@@ -1,5 +1,0 @@
-2020/10/06-07:46:46.346 27b Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_addons.mozilla.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/06-07:47:08.821 1043 Level-0 table #5: started
-2020/10/06-07:47:08.882 1043 Level-0 table #5: 1269 bytes OK
-2020/10/06-07:47:08.966 1043 Delete type=0 #3
-2020/10/06-07:47:08.966 1043 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,8 +1,0 @@
-2020/10/09-04:59:45.499 bbee Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_buetedu-my.sharepoint.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/09-04:59:45.499 bbee Recovering log #201
-2020/10/09-04:59:45.499 bbee Reusing old log /home/anik/.config/chromium/Default/IndexedDB/https_buetedu-my.sharepoint.com_0.indexeddb.leveldb/000201.log 
-2020/10/09-05:00:17.503 324f Level-0 table #205: started
-2020/10/09-05:00:17.503 324f Level-0 table #205: 0 bytes OK
-2020/10/09-05:00:17.541 324f Delete type=0 #201
-2020/10/09-05:00:17.542 324f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/10/09-05:00:17.542 324f Manual compaction at level-1 from (begin) .. (end); will stop at (end)

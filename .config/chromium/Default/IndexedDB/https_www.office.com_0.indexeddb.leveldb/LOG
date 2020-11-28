@@ -1,5 +1,0 @@
-2020/10/09-03:45:40.513 30ae Reusing MANIFEST /home/anik/.config/chromium/Default/IndexedDB/https_www.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/09-03:45:42.556 324f Level-0 table #5: started
-2020/10/09-03:45:42.622 324f Level-0 table #5: 217 bytes OK
-2020/10/09-03:45:42.764 324f Delete type=0 #3
-2020/10/09-03:45:42.764 324f Manual compaction at level-0 from (begin) .. (end); will stop at (end)
