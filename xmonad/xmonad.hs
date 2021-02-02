@@ -10,10 +10,25 @@
 import XMonad
 import XMonad.Layout.Spacing
 import XMonad.Hooks.DynamicLog
+
 import XMonad.Util.SpawnOnce
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run
+
+import XMonad.Actions.Submap
+import qualified XMonad.Actions.Search as S
+
+
+    -- Prompt
+import XMonad.Prompt
+import XMonad.Prompt.Input
+import XMonad.Prompt.FuzzyMatch
+import XMonad.Prompt.Man
+import XMonad.Prompt.Pass
+import XMonad.Prompt.Shell
+import XMonad.Prompt.Ssh
+import XMonad.Prompt.XMonad
 
 import Data.Monoid
 import System.Exit
@@ -36,7 +51,7 @@ myClickJustFocuses = True
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 3
+myBorderWidth   = 2
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -58,7 +73,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#1d2330"
-myFocusedBorderColor = "#e1acff"
+myFocusedBorderColor = "#51afef"
 
 -- xmobar config
 mybar = "xmobar"
@@ -73,9 +88,46 @@ mypp = xmobarPP {   ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Curre
                 }
 
 
+dtXPConfig :: XPConfig
+dtXPConfig = def
+      { font                = "xft:JetBrainsMono Nerd Font Mono:regular:size=10:antialias=true:hinting=true"
+      , bgColor             = "#282c34"
+      , fgColor             = "#bbc2cf"
+      , bgHLight            = "#c792ea"
+      , fgHLight            = "#000000"
+      , borderColor         = "#535974"
+      , promptBorderWidth   = 1
+      , position            = Top
+      -- , position            = CenteredAt { xpCenterY = 0.3, xpWidth = 0.3 }
+      , height              = 23
+      , historySize         = 256
+      , historyFilter       = id
+      , defaultText         = []
+      , autoComplete        = Nothing  -- set Just 100000 for .1 sec
+      , showCompletionOnTab = False
+      -- , searchPredicate     = isPrefixOf
+      , searchPredicate     = fuzzyMatch
+      , alwaysHighlight     = True
+      , maxComplRows        = Nothing      -- set to 'Just 5' for 5 rows
+      }
+
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
+
+archwiki  :: S.SearchEngine
+
+archwiki = S.searchEngine "archwiki" "https://wiki.archlinux.org/index.php?search="
+
+searchList :: [(String, S.SearchEngine)]
+searchList = [ ("a", archwiki)
+             , ("d", S.duckduckgo)
+             , ("g", S.google)
+             , ("s", S.hoogle)
+             , ("w", S.wikipedia)
+             , ("y", S.youtube)
+             ]
+
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     
     -----------------------------------------------Application launching-------------------------------------------- 
@@ -176,7 +228,7 @@ extra_keys =[
     -- Expand the master area
                 ("M-S-l",      sendMessage Expand),
     --  Reset the layouts on the current workspace to default
-                ("M-S-<Space>",setLayout $ XMonad.layoutHook conf),
+--                ("M-S-<Space>",setLayout $ XMonad.layoutHook conf),
 
     -- Resize viewed windows to the correct size
                 ("M-n",        refresh),
@@ -208,8 +260,8 @@ extra_keys =[
 
     -- Deincrement the number of windows in the master area
     --            ((modm              , xK_period), sendMessage (IncMasterN (-1)))
-            ]
-
+         ]
+   ++ [("M-s " ++ k, S.promptSearch dtXPConfig f) | (k,f) <- searchList ]
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
 --
@@ -304,7 +356,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
 		   spawnOnce "nitrogen --restore &"
-		   spawnOnce "picom -f &"
+		   spawnOnce "compton &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
