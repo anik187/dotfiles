@@ -7,20 +7,10 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'vim-syntastic/syntastic'
 Plug 'lilydjwg/colorizer'
-Plug 'frazrepo/vim-rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'dracula/vim'
 Plug 'vim-airline/vim-airline'
-Plug 'jreybert/vimagit'
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'tmhedberg/SimpylFold'
-Plug 'tpope/vim-commentary'
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 call plug#end()
 
 if need_to_install_plugins == 1
@@ -30,7 +20,7 @@ if need_to_install_plugins == 1
     q
 endif
 
-let mapleader=','
+let mapleader=' '
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -55,7 +45,7 @@ set shiftwidth=4
 set backspace=indent,eol,start
 set expandtab
 set incsearch
-set hlsearch
+set nohlsearch
 set nobackup
 set noswapfile
 set laststatus=2
@@ -104,11 +94,12 @@ let g:indentLine_setColors = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled  = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq   = 0
 
-set termguicolors
-colorscheme dracula
-set background=dark
 highlight DraculaFg guifg=#bbc5ff
 highlight Normal    guifg=#bbc5ff
+" Automatically deletes all trailing whitespace and newlines at end of file on save.
+	autocmd BufWritePre * %s/\s\+$//e
+	autocmd BufWritePre * %s/\n\+\%$//e
+	autocmd BufWritePre *.[ch] %s/\%$/\r/e
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
