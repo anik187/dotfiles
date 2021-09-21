@@ -1,23 +1,32 @@
 -- singularity color scheme for xmobar
-Config { font = "xft:JetBrainsMono Nerd Font Mono:size=10:antialias=true:hinting=true"
+Config { font = "xft:JetBrainsMono Nerd Font Mono:size=12:antialias=true:hinting=true"
+       , additionalFonts = [
+                             "xft:Font Awesome 5 Free Solid:pixelsize=13"
+                           , "xft:Font Awesome 5 Brands:pixelsize=12"
+                           ]
        , borderColor = "#282c34"
        , border = NoBorder
        , bgColor = "#282c34"
        , fgColor = "#bbc2cf"
-       , position = Static { xpos = 0 , ypos = 0, width = 1280, height = 25 }
+       , position = Static { xpos = 0 , ypos = 0, width = 1920, height = 27 }
        , lowerOnStart = True
        , iconRoot = "/home/anik/.xmonad/xpm"
        , commands = [ Run UnsafeStdinReader
-                    , Run Cpu ["-t", "cpu: <total>%"] 10
-                    , Run Memory ["-t", "mem: <used>M (<usedratio>%)"] 20
-                    , Run Network "enp7s0" ["-t", "net: <rx>k|<tx>k"
+                    , Run Cpu ["-t", "<fn=1>\xf109</fn> <total>%"] 10
+                    , Run Memory ["-t", "<fn=1>\xf2db</fn> <used>M (<usedratio>%)"] 20
+                    , Run Network "wlan0" ["-t", "<fn=1>\xf0aa</fn> <tx>k|<rx>k <fn=1>\xf0ab</fn>"
                                            , "-L","0","-H","10000000"
                                            , "--normal","#ecbe7b","--high","#ff6c6b"] 10
                     , Run Com "uname" ["-r", "-s"] "" 36000
+                    , Run Com "echo" ["<fn=1>\xf028</fn>"] "volicon" 36000
+                    , Run Com "echo" ["<fn=1>\xf185</fn>"] "bricon" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run Com "/home/anik/scripts/volume.sh" [] "vol" 10
+                    , Run Com "/home/anik/scripts/battery.sh" [] "bat" 10
+                    , Run Com "/home/anik/scripts/brightness.sh" [] "br" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<action=`kitty -e vim ~/dotfiles/xmonad/xmonad.hs`><icon=xmonad_xpm_haskell_20.xpm/> </action><fc=#666666>|</fc> %UnsafeStdinReader%}\
-                    \{ <fc=#ff6c6b>%cpu%</fc> | <fc=#98be65>%memory%</fc> | <fc=#ecbe7b>%enp7s0%</fc> | <fc=#46d9ff>%date%</fc> <action=`./.dmenu/powermenu.sh`><icon=poweroff.xpm/> </action>"
+       , template = "<action=`kitty -e vim ~/dotfiles/xmonad/xmonad.hs`> <icon=xmonad_xpm_haskell_20.xpm/> </action><fc=#666666>|</fc> %UnsafeStdinReader%}\
+                    \{ <fc=#ff6c6b>%cpu%</fc> | <fc=#98be65>%memory%</fc> | <fc=#eb92be>%bricon%</fc> <fc=#eb92be>%br%</fc> | <fc=#6af2f0>%volicon%</fc> <fc=#6af2f0>%vol%</fc> | %bat% | <fc=#ecbe7b>%wlan0%</fc> | <fc=#46d9ff>%date%</fc> <action=`./.dmenu/powermenu.sh`><icon=poweroff.xpm/> </action>"
        }

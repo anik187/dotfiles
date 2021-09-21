@@ -1,0 +1,7 @@
+
+xmonad.hs:85:9: warning: [-Wtabs]
+    Tab character found here, and in five further locations.
+    Please use spaces instead.
+   |
+85 |                           , ppTitle = xmobarColor "#b3afc2" "" . shorten 40     -- Title of active window in xmobar
+   |         ^^^^^^^^

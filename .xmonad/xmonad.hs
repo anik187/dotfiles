@@ -51,7 +51,7 @@ myClickJustFocuses = True
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 2
+myBorderWidth   = 3
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -81,63 +81,23 @@ mybar = "xmobar"
 mypp = xmobarPP {   ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]" -- Current workspace in xmobar
                   , ppVisible = xmobarColor "#c3e88d" ""                -- Visible but not current workspace
                   , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" ""   -- Hidden workspaces in xmobar
-                  , ppHiddenNoWindows = xmobarColor "#c792ea" ""        -- Hidden workspaces (no windows) 
+                  , ppHiddenNoWindows = xmobarColor "#c792ea" ""        -- Hidden workspaces (no windows)
         		  , ppTitle = xmobarColor "#b3afc2" "" . shorten 40     -- Title of active window in xmobar
                   , ppSep =  "<fc=#666666> | </fc>"                     -- Separators in xmobar
                   , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"  -- Urgent workspace
                 }
 
 
-dtXPConfig :: XPConfig
-dtXPConfig = def
-      { font                = "xft:JetBrainsMono Nerd Font Mono:regular:size=10:antialias=true:hinting=true"
-      , bgColor             = "#282c34"
-      , fgColor             = "#bbc2cf"
-      , bgHLight            = "#c792ea"
-      , fgHLight            = "#000000"
-      , borderColor         = "#535974"
-      , promptBorderWidth   = 1
-      , position            = Top
-      -- , position            = CenteredAt { xpCenterY = 0.3, xpWidth = 0.3 }
-      , height              = 23
-      , historySize         = 256
-      , historyFilter       = id
-      , defaultText         = []
-      , autoComplete        = Nothing  -- set Just 100000 for .1 sec
-      , showCompletionOnTab = False
-      -- , searchPredicate     = isPrefixOf
-      , searchPredicate     = fuzzyMatch
-      , alwaysHighlight     = True
-      , maxComplRows        = Nothing      -- set to 'Just 5' for 5 rows
-      }
-
-------------------------------------------------------------------------
--- Key bindings. Add, modify or remove key bindings here.
---
-
-archwiki  :: S.SearchEngine
-
-archwiki = S.searchEngine "archwiki" "https://wiki.archlinux.org/index.php?search="
-
-searchList :: [(String, S.SearchEngine)]
-searchList = [ ("a", archwiki)
-             , ("d", S.duckduckgo)
-             , ("g", S.google)
-             , ("s", S.hoogle)
-             , ("w", S.wikipedia)
-             , ("y", S.youtube)
-             ]
-
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
-    
-    -----------------------------------------------Application launching-------------------------------------------- 
-    
+
+    -----------------------------------------------Application launching--------------------------------------------
+
     -- launch a terminal
     [ --((modm , xK_Return), spawn $ XMonad.terminal conf)
-    
+
     -- launch config files
  --   , ((modm .|. controlMask,   xK_c ), spawn ("./.dmenu/dmenu-edit-configs.sh"))
- 
+
     -- launch dmenu
     -- ((modm,               xK_space ), spawn "dmenu_run")
 
@@ -221,7 +181,7 @@ extra_keys =[
                 ("M-<Space>",  spawn "dmenu_run"),
                 ("M-S-c",      kill),
                 ("M-S-q",      io (exitWith ExitSuccess)),
-                ("M-S-r",      spawn "xmonad --recompile; xmonad --restart"),   
+                ("M-S-r",      spawn "xmonad --recompile; xmonad --restart"),
     -- Shrink the master area
                 ("M-S-h",      sendMessage Shrink),
 
@@ -253,15 +213,23 @@ extra_keys =[
 
 
     -- Push window back into tiling
-                ("M-t",        withFocused $ windows . W.sink)
+                ("M-t",        withFocused $ windows . W.sink),
 
     -- Increment the number of windows in the master area
     --            ((modm              , xK_comma ), sendMessage (IncMasterN 1)),
 
     -- Deincrement the number of windows in the master area
     --            ((modm              , xK_period), sendMessage (IncMasterN (-1)))
-         ]
-   ++ [("M-s " ++ k, S.promptSearch dtXPConfig f) | (k,f) <- searchList ]
+
+                ("<XF86AudioPlay>", spawn "mocp --play"),
+                ("<XF86AudioPrev>", spawn "mocp --previous"),
+                ("<XF86AudioNext>", spawn "mocp --next"),
+                ("<XF86AudioMute>", spawn "amixer set Master toggle"),
+                ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute"),
+                ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute"),
+                ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 5"),
+                ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 5")
+            ]
 ------------------------------------------------------------------------
 -- Mouse bindings: default actions bound to mouse events
 --
@@ -295,7 +263,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = spacingRaw False (Border 5 0 5 0) True (Border 0 5 0 5) True $ Tall nmaster delta ratio
+     tiled   = spacingRaw False (Border 7 0 7 0) True (Border 0 7 0 7) True $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
