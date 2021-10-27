@@ -42,12 +42,12 @@ vim.wo.cursorline = true
 
 -- local buffer options
 
-vim.o.tabstop = 2
-vim.bo.tabstop = 2
-vim.o.softtabstop = 2
-vim.bo.softtabstop = 2
-vim.o.shiftwidth = 2
-vim.bo.shiftwidth = 2
+vim.o.tabstop = 4
+vim.bo.tabstop = 4
+vim.o.softtabstop = 4
+vim.bo.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.bo.shiftwidth = 4
 vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.expandtab = true
@@ -71,7 +71,7 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 
 vim.cmd('language en_US.utf-8')
 vim.wo.list = true
-vim.o.listchars = 'tab:┆·,trail:·,precedes:,extends:'
+vim.o.listchars = 'trail:·,precedes:,extends:'
 
 vim.g.markdown_fenced_languages = {'sh', 'vim'}
 

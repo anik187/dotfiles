@@ -7,6 +7,7 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  -- icons secton
   use 'ryanoasis/vim-devicons'
   use 'kyazdani42/nvim-web-devicons'
   -- statusline section
@@ -15,11 +16,18 @@ return require('packer').startup(function()
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use "lukas-reineke/indent-blankline.nvim"
   -- theme section
   use {'dracula/vim', as = 'dracula'}
-  use 'norcalli/nvim-colorizer.lua'
+  use 'navarasu/onedark.nvim'
+  use "rafamadriz/neon"
+  use 'yashguptaz/calvera-dark.nvim'
   use 'folke/tokyonight.nvim'
   use 'romgrk/doom-one.vim'
+  use 'windwp/nvim-ts-autotag'
+  use 'p00f/nvim-ts-rainbow'
+  use 'norcalli/nvim-colorizer.lua'
   -- file explorer
   use {
       'kyazdani42/nvim-tree.lua',
@@ -30,10 +38,10 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'mhinz/vim-startify'
-  use 'liuchengxu/vim-which-key'
   use 'voldikss/vim-floaterm'
+  use 'folke/which-key.nvim'
+  use "terrortylor/nvim-comment"
+  use 'glepnir/dashboard-nvim'
   use 'junegunn/fzf.vim'
   use 'airblade/vim-rooter'
-  use 'preservim/nerdcommenter'
 end)

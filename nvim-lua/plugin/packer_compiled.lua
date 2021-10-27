@@ -69,6 +69,18 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
+  },
+  ["calvera-dark.nvim"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/calvera-dark.nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+  },
   ["doom-one.vim"] = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/doom-one.vim"
@@ -81,17 +93,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  nerdcommenter = {
+  neon = {
     loaded = true,
-    path = "/home/anik/.local/share/nvim/site/pack/packer/start/nerdcommenter"
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/neon"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+  },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -109,9 +129,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -133,13 +165,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anik/.local/share/nvim/site/pack/packer/start/vim-rooter"
   },
-  ["vim-startify"] = {
+  ["which-key.nvim"] = {
     loaded = true,
-    path = "/home/anik/.local/share/nvim/site/pack/packer/start/vim-startify"
-  },
-  ["vim-which-key"] = {
-    loaded = true,
-    path = "/home/anik/.local/share/nvim/site/pack/packer/start/vim-which-key"
+    path = "/home/anik/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   },
   ["windline.nvim"] = {
     loaded = true,

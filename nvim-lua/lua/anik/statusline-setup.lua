@@ -1,9 +1,9 @@
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'tokyonight',
-    component_separators = {'', ''},
-    section_separators = {'', ''},
+    theme = 'onedark',
+    component_separators = {'', ''},
+    section_separators = {'', ''},
     disabled_filetypes = {}
   },
   sections = {
@@ -23,7 +23,6 @@ require('lualine').setup({
     lualine_z = {}
   },
   tabline = {
-    lualine_a = {'filename', 'filetype'},
   },
   extensions = {'nvim-tree'}
 })
